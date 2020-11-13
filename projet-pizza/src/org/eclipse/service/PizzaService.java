@@ -12,19 +12,19 @@ public class PizzaService {
 		pizzas.add(new Pizza(2, "indienne", "indienne"));
 		pizzas.add(new Pizza(3, "français", "neptune"));
 	}
-	
-	
+
 	public void save(Pizza pizza) {
 		pizzas.add(pizza);
 	}
+
 	public ArrayList<Pizza> findAll() {
 		return pizzas;
 	}
-	
-	public void remove (int id) {
-		for(Pizza pizza: pizzas) {
-			if (pizza.getId()==id) {
-				pizzas.remove(pizza);
+
+	public void remove(int id) {
+		for (int i = 0; i < pizzas.size(); i++) {
+			if (pizzas.get(i).getId() == id) {
+				pizzas.remove(i);
 			}
 		}
 	}

@@ -32,9 +32,10 @@ public class ConnexionServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("utilisateur", utilisateur);
 			if (utilisateur.getType().equals("producteur")) {
-				getServletContext().getRequestDispatcher("/WEB-INF/pizza/produire.jsp").forward(request, response);
+				response.sendRedirect("production");
+				
 			} else {
-				getServletContext().getRequestDispatcher("/WEB-INF/pizza/consommer.jsp").forward(request, response);
+				response.sendRedirect("consommation");
 
 			}
 		}
