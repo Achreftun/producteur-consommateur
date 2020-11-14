@@ -7,8 +7,8 @@
 <title>Consommation</title>
 </head>
 <body>
-	<header>
-		<%@ include file="../shared/header.jsp"%>
+	<header>		
+		<c:import url="../shared/header.jsp"></c:import>
 	</header>
 	<main>
 	<h3>Nos Pizzas</h3>
